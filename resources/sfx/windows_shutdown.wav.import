@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/windows_shutdown.wav-9f41e70b05db2b111cf5845c7d482095.sample"
+
+[deps]
+
+source_file="res://resources/sfx/windows_shutdown.wav"
+dest_files=[ "res://.import/windows_shutdown.wav-9f41e70b05db2b111cf5845c7d482095.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

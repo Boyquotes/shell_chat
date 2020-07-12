@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/windows_boot.wav-86964ba1b202b3caf7f719411dec6d75.sample"
+
+[deps]
+
+source_file="res://resources/sfx/windows_boot.wav"
+dest_files=[ "res://.import/windows_boot.wav-86964ba1b202b3caf7f719411dec6d75.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://resources/sprites/icon_roll_32x32.png" type="Texture" id=1]
+
+
+
+[sub_resource type="Animation" id=1]
+resource_name = "rotation"
+length = 2.0
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpinninIcon:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 19, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 ]
+}
+
+[node name="LoadingScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0.188235, 0.231373, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpinninIcon" type="Sprite" parent="."]
+position = Vector2( 128, 72 )
+texture = ExtResource( 1 )
+vframes = 5
+hframes = 5
+frame = 19
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "rotation"
+playback_speed = 2.0
+anims/rotation = SubResource( 1 )
+
+[node name="Message" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -14.0
+margin_top = 20.0
+margin_right = 18.0
+margin_bottom = 27.0
+rect_clip_content = false
+custom_colors/default_color = Color( 1, 0.807843, 0.588235, 1 )
+bbcode_enabled = true
+bbcode_text = "[wave amp=25 freq=4]Loading[/wave]"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
